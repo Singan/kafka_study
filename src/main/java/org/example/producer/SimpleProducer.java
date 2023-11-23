@@ -26,6 +26,8 @@ public class SimpleProducer {
         String messageValue = "message3";
         ProducerRecord<String, String> record = new ProducerRecord<>(TOPIC_NAME, "key1",messageValue);
         producer.send(record);
+        producer.send(record);
+        producer.send(record);
         logger.info("{}", record);
         producer.flush();
         producer.close();

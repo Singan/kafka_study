@@ -25,7 +25,7 @@ public class Streams1 {
 
         StreamsBuilder builder = new StreamsBuilder();
         KStream<String, String> stream = builder.stream(STREAM_LOG);
-
+ 
         stream.to(STREAM_LOG_COPY);
 
         KafkaStreams streams = new KafkaStreams(builder.build(), props);

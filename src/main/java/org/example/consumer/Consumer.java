@@ -14,7 +14,7 @@ import java.util.Properties;
 
 public class Consumer {
     private final static Logger logger = LoggerFactory.getLogger(Consumer.class);
-    private final static String[] TOPIC_NAME = {"test"};
+    private final static String[] TOPIC_NAME = {"stream_log_filter"};
     private final static String BOOTSTRAP_SERVERS = "my-kafka:9092";
     private final static String GROUP_ID = "test-group";
 

@@ -11,7 +11,7 @@ import java.util.Properties;
 
 public class SimpleProducer {
     private final static Logger logger = LoggerFactory.getLogger(SimpleProducer.class);
-    private final static String TOPIC_NAME = "test";
+    private final static String TOPIC_NAME = "stream_log";
     private final static String BOOTSTRAP_SERVERS = "my-kafka:9092";
 
     public static void main(String[] args) {
@@ -23,7 +23,7 @@ public class SimpleProducer {
 
         KafkaProducer<String, String> producer = new KafkaProducer<>(configs);
 
-        String messageValue = "message3";
+        String messageValue = "messs1";
         ProducerRecord<String, String> record = new ProducerRecord<>(TOPIC_NAME, "key1",messageValue);
         producer.send(record);
         producer.send(record);

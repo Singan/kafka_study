@@ -33,6 +33,7 @@ public class Consumer {
             for (ConsumerRecord<String, String> record : records) {
                 System.out.println(record);
             }
+            consumer.commitSync();
         }
     }
 }
